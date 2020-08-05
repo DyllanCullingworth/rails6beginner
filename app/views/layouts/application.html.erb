@@ -6,11 +6,26 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<!--    Bootstrap-->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+          integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
+          crossorigin="anonymous">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
-    <%= @name if @name.present? %>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+    <%= render partial: 'layouts/footer' %>
   </body>
 </html>
