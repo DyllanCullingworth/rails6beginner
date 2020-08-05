@@ -1,13 +1,9 @@
 class WelcomeController < ApplicationController
-  def home
-    some_value = true
 
-    if some_value
-      redirect_to root_url, flash: { success: "Redirect successful" }
-    else
-      redirect_to welcome_features_path
-    end
-    logger.debug @message
+
+  before_action :set_values
+
+  def home
   end
 
   def features
@@ -18,4 +14,14 @@ class WelcomeController < ApplicationController
 
   def contact
   end
+
+  private
+
+  def set_values
+    #gets called before any other action on this page
+    @name = "David"
+    #passes the instance variable @name to all actions unless otherwise stated
+  end
+
+
 end
