@@ -3,9 +3,9 @@ class WelcomeController < ApplicationController
     some_value = true
 
     if some_value
-      @message = 'Welcome to the home page'
+      redirect_to root_url, flash: { success: "Redirect successful" }
     else
-      @message = 'Go away'
+      redirect_to welcome_features_path
     end
     logger.debug @message
   end
