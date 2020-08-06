@@ -1,13 +1,38 @@
 <% content_for :page_title, "Home" %>
 
 
+<div class="row">
+  <div class="col-8">
+    <p class="h4">Latest Posts</p>
 
-<h1>Latest Posts</h1>
+    <% @posts.each do |post| %>
+      <%= render partial: "posts/post", locals: { post:post } %>
+    <% end %>
+  </div>
+  <div class="col-4">
+    <p class="h4">About</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Alias animi corporis cum eligendi odio.
+      Ad aspernatur esse illo ipsum molestias nam natus,
+      nisi non numquam odit qui quia, quibusdam voluptas?</p>
+  </div>
+  <p class="h4">Categories</p>
+  <% @categories.each do |category| %>
+    <%= category.title %> - <%= category.total %>
+  <% end %>
+</div>
 
-<% @posts.each do |post| %>
-  <%= render partial: "posts/post", locals: { post:post } %>
-<% end %>
+
+
 
 <% content_for :scripts do %>
-  This will be displayed at the bottom of the file
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        This will be displayed at the bottom of the file
+        Find me in homepage.html.erb
+      </div>
+    </div>
+  </div>
+
 <% end %>

@@ -3,6 +3,7 @@
 class PublicController < ApplicationController
   def homepage
     @posts = Post.all
+    @categories = Category.all
   end
 
   def about; end

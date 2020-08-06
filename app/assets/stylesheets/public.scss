@@ -1,5 +1,27 @@
 #topnav {
+  margin-top: 10px;
   li {
     display:inline;
+    padding: 5px 7px;
   }
+}
+
+#site-name {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.page-nav {
+  background-color: #aba3a3;
+  margin-bottom: 20px;
+}
+
+.post-pre{
+  background-color: #999999;
+}
+
+#footer {
+  border-top: 1px solid grey;
+  margin-top: 20px;
+  padding-top: 20px;
 }
