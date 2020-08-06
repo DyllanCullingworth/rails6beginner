@@ -31,6 +31,8 @@
     </div>
   </div>
 
+
+    <%= yield(:scripts) if content_for?(:scripts) %>
     <%= render partial: 'layouts/footer' %>
   </body>
 </html>
