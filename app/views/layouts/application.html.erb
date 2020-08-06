@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield :page_title %></title>
+    <title><%= content_for?(:page_title) ? yield(:page_title) : "Ruby on Rails Blog" %> | Rails App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
