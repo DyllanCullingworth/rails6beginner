@@ -15,11 +15,12 @@
       Alias animi corporis cum eligendi odio.
       Ad aspernatur esse illo ipsum molestias nam natus,
       nisi non numquam odit qui quia, quibusdam voluptas?</p>
+
+    <p class="h4">Categories</p>
+    <% @categories.each do |category| %>
+      <p><%= category.title %> - <%= category.total_count %></p>
+    <% end %>
   </div>
-  <p class="h4">Categories</p>
-  <% @categories.each do |category| %>
-    <%= category.title %> - <%= category.total %>
-  <% end %>
 </div>
 
 

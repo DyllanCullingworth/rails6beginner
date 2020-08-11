@@ -2,7 +2,8 @@
 
 class PublicController < ApplicationController
   def homepage
-    @posts = Post.all
+    #using scopes from Post model
+    @posts = Post.active.order_by_latest_first.limit_2
     @categories = Category.all
   end
 

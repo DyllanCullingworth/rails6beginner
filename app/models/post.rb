@@ -17,4 +17,23 @@ class Post < ApplicationRecord
     all.size
   end
 
+  #callbacks - validation / save / create / update etc
+  after_create :update_total_posts_count
+
+  scope :active, -> { where( active: true ) }
+  scope :order_by_latest_first, -> { order( created_at: :desc) }
+  scope :limit_2, -> { limit( 2 ) }
+
+  private
+
+
+  def update_total_posts_count
+    # update category total count column to show total posts count
+    category.increment(:total_count, 1).save
+  end
+  #callbacks
+  def post_log_message
+    #
+    puts "Post created with an id of #{id}"
+  end
 end

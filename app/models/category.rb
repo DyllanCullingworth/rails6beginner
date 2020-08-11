@@ -4,7 +4,5 @@ class Category < ApplicationRecord
 
   has_many :posts
 
-  def total
-    posts.count
-  end
+
 end
