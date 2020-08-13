@@ -1,9 +1,17 @@
 <h1><%= @post.title %></h1>
 
+<!--using a custom helper-->
+<p><small><%= post_meta @post %></small></p>
 <%= @post.details %>
 <p>The total number of Posts: <%= Post.total %></p>
 
+
+<!--makes paragraphs show linbe breaks-->
 <%= simple_format @post.body %>
+
+
+<%= render partial: "posts/view_form", locals: { post: @post }%>
+
 
 
 

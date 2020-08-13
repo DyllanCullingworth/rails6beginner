@@ -18,7 +18,7 @@
 
 
 
-  <div class="container">
+  <div class="container bg-white">
     <div class="row">
       <div class="col page-nav">
         <%= render partial: "layouts/menu" %>
@@ -27,12 +27,13 @@
     <div class="row">
       <div class="col">
         <%= yield %>
+        <%= yield(:scripts) if content_for?(:scripts) %>
       </div>
     </div>
   </div>
 
 
-    <%= yield(:scripts) if content_for?(:scripts) %>
+
     <%= render partial: 'layouts/footer' %>
 
 

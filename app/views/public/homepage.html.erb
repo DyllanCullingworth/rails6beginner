@@ -1,4 +1,4 @@
-<% content_for :page_title, "Home" %>
+<% page_title "Home" %>
 
 
 <div class="row">
@@ -11,6 +11,10 @@
   </div>
   <div class="col-4">
     <p class="h4">About</p>
+
+    #image helper
+    <%= image_tag "blog-img.jpg", alt: "Blog image", class: "img-fluid mt-2 mb-2", style: "border-radius:6px; border:1px solid #444"%>
+
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       Alias animi corporis cum eligendi odio.
       Ad aspernatur esse illo ipsum molestias nam natus,
