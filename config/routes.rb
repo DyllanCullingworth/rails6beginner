@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :accounts
   root to: 'public#homepage'
   resources :posts
   get "about" => "public#about", as: :about
