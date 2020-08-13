@@ -18,7 +18,7 @@ class PostsController < ApplicationController
         render json: @post.to_json
       }
       format.text {
-        render plain: @post.title
+        render plain: @post.titlew
       }
     end
   end
